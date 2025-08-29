@@ -1,31 +1,18 @@
-import { StyleSheet, Text, SafeAreaView, Alert } from "react-native";
+import { StyleSheet, Text, SafeAreaView, Alert, Image } from "react-native";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.titleText}>Title</Text>
+      <Image
+        source={require("./assets/splash-icon.png")}
+        style={styles.image1}
+      />
 
-      <Text
-        style={{
-          fontSize: 20,
-          textAlign: "justify",
-        }}
-        numberOfLines={2}
-      >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        <Text
-          style={styles.subtitleText}
-          onPress={() => Alert.alert("Text pressed!")}
-        >
-          Press Here
-        </Text>
-        Dolore aut consequuntur omnis velit architecto tempore molestias iusto
-        natus, ex, delectus nobis et tempora placeat? Ut, neque praesentium
-        repudiandae maiores ea a aliquam numquam id provident, cum eveniet
-        veritatis nobis voluptas saepe vero tenetur, eum autem consequatur?
-        Temporibus, quisquam aspernatur? Ullam corrupti dolor officia dicta
-        obcaecati laudantium quos quas molestiae!
-      </Text>
+      <Image
+        source={{ uri: "https://picsum.photos/200/300" }}
+        style={styles.image2}
+        blurRadius={1}
+      />
     </SafeAreaView>
   );
 }
@@ -33,13 +20,15 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "red",
+    backgroundColor: "white",
   },
-  titleText: {
-    textAlign: "center",
-    fontSize: 50,
-    fontWeight: "bold",
-    color: "blue",
+  image1: {
+    height: 200,
+    width: 200,
   },
-  subtitleText: { color: "white", textDecorationLine: "underline" },
+  image2: {
+    height: 200,
+    width: 200,
+    borderRadius: 100,
+  },
 });
