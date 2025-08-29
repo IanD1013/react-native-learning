@@ -7,6 +7,7 @@ import {
   Button,
   TouchableOpacity,
   Pressable,
+  ScrollView,
 } from "react-native";
 
 export default function App() {
@@ -14,10 +15,33 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Image
-        source={require("./assets/splash-icon.png")}
-        style={styles.image1}
-      />
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ backgroundColor: "red" }}
+      >
+        <Image
+          source={require("./assets/splash-icon.png")}
+          style={styles.image1}
+        />
+        <Image
+          source={require("./assets/splash-icon.png")}
+          style={styles.image1}
+        />
+        <Image
+          source={require("./assets/splash-icon.png")}
+          style={styles.image1}
+        />
+        <Image
+          source={require("./assets/splash-icon.png")}
+          style={styles.image1}
+        />
+        <Image
+          source={require("./assets/splash-icon.png")}
+          style={styles.image1}
+        />
+      </ScrollView>
 
       <Pressable onPress={onButtonPress}>
         <Image
