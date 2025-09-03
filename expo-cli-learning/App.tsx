@@ -1,29 +1,29 @@
-import { StyleSheet, SafeAreaView, Text, View } from "react-native";
+import { StyleSheet, SafeAreaView, Text, View, Dimensions } from "react-native";
 
 export default function App() {
+  // Percentage
+  // Dimensions
+  // Libraries for responsive
+
+  console.log(Dimensions.get("screen"));
+
+  const PHONE_HEIGHT = Dimensions.get("screen").height;
+  const PHONE_WIDTH = Dimensions.get("screen").width;
+
   return (
     <View
       style={{
         backgroundColor: "white",
         flex: 1,
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
       }}
     >
-      <View style={{ width: 90, height: 90, backgroundColor: "tomato" }} />
       <View
         style={{
-          width: 90,
-          height: 90,
-          backgroundColor: "blue",
-          bottom: 20,
-          left: 20,
-          position: "absolute",
+          width: PHONE_WIDTH / 2,
+          height: PHONE_HEIGHT / 2,
+          backgroundColor: "tomato",
         }}
       />
-      <View style={{ width: 90, height: 90, backgroundColor: "gold" }} />
-      <View style={{ width: 90, height: 90, backgroundColor: "grey" }} />
     </View>
   );
 }
