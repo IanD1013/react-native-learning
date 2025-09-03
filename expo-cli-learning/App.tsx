@@ -7,13 +7,16 @@ export default function App() {
         backgroundColor: "white",
         flex: 1,
         flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
+        alignItems: "center", // when you use flexWrap, this doesn't do anything
+        flexWrap: "wrap",
+        alignContent: "center", // need to use alignContent
       }}
     >
-      <View style={{ width: 100, height: 100, backgroundColor: "tomato" }} />
-      <View style={{ width: 100, height: 100, backgroundColor: "blue" }} />
-      <View style={{ width: 100, height: 100, backgroundColor: "gold" }} />
+      <View style={{ width: 90, height: 90, backgroundColor: "tomato" }} />
+      <View style={{ width: 90, height: 90, backgroundColor: "blue" }} />
+      <View style={{ width: 90, height: 90, backgroundColor: "gold" }} />
+      <View style={{ width: 90, height: 90, backgroundColor: "grey" }} />
+      <View style={{ width: 90, height: 90, backgroundColor: "green" }} />
     </View>
   );
 }
