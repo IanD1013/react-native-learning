@@ -1,15 +1,7 @@
-import { StyleSheet, SafeAreaView, Text, View, Dimensions } from "react-native";
+import { View } from "react-native";
+import { s, vs, scale, verticalScale } from "react-native-size-matters";
 
 export default function App() {
-  // Percentage
-  // Dimensions
-  // Libraries for responsive
-
-  console.log(Dimensions.get("screen"));
-
-  const PHONE_HEIGHT = Dimensions.get("screen").height;
-  const PHONE_WIDTH = Dimensions.get("screen").width;
-
   return (
     <View
       style={{
@@ -19,11 +11,12 @@ export default function App() {
     >
       <View
         style={{
-          width: PHONE_WIDTH / 2,
-          height: PHONE_HEIGHT / 2,
+          width: scale(300),
+          height: vs(600),
           backgroundColor: "tomato",
         }}
       />
     </View>
   );
 }
+``;
