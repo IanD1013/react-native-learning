@@ -1,6 +1,10 @@
-import GoldScreen from "./src/screens/GoldScreen";
-import PurpleScreen from "./src/screens/PurpleScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import MainStackNavigator from "./src/navigation/MainStackNavigator";
 
 export default function App() {
-  return <PurpleScreen />;
+  return (
+    <NavigationContainer>
+      <MainStackNavigator />;
+    </NavigationContainer>
+  );
 }
