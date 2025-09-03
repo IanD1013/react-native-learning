@@ -12,6 +12,12 @@ const TomatoScreen = () => {
         title="Go to Gold Screen"
         onPress={() => navigation.navigate("GoldScreen")}
       />
+      <Text onPress={() => navigation.navigate("GoldScreen", { name: "Ian" })}>
+        Name: Ian
+      </Text>
+      <Text onPress={() => navigation.navigate("GoldScreen", { name: "Dong" })}>
+        Name: Dong
+      </Text>
     </View>
   );
 };
