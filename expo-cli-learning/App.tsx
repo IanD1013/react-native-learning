@@ -1,30 +1,22 @@
-import React, { useState } from "react";
-import { Button, SafeAreaView, Modal, Text } from "react-native";
-import AntDesign from "@expo/vector-icons/AntDesign";
+import { View, Text, ImageBackground } from "react-native";
 
 export default function App() {
-  const [modalVisible, setModalVisible] = useState(false);
-
   return (
-    <SafeAreaView
-      style={{
-        backgroundColor: "gold",
-        flex: 1,
-        justifyContent: "center",
-      }}
+    <ImageBackground
+      source={require("./assets/icon.png")}
+      // source={{uri: "link internet"}}
+      style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
     >
-      <Button title="Show Model" onPress={() => setModalVisible(true)} />
-
-      <Modal visible={modalVisible} animationType="slide">
-        <Text style={{ fontSize: 50, marginTop: 50 }}>Modal is opened</Text>
-        <Button title="Close Model" onPress={() => setModalVisible(false)} />
-        <AntDesign
-          name="closecircleo"
-          size={24}
-          color="black"
-          onPress={() => setModalVisible(false)}
-        />
-      </Modal>
-    </SafeAreaView>
+      <View
+        style={{
+          backgroundColor: "#fff",
+          height: 200,
+          width: 200,
+          borderRadius: 15,
+        }}
+      >
+        <Text>Hello world</Text>
+      </View>
+    </ImageBackground>
   );
 }
